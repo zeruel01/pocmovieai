@@ -1,0 +1,15 @@
+@MovieSearch.Api_HostAddress = http://localhost:5045
+
+GET {{MovieSearch.Api_HostAddress}}/api/movies?title=Matrix&genre=Action&actor=Keanu
+Accept: application/json
+
+###
+
+GET {{MovieSearch.Api_HostAddress}}/api/movies/1
+Accept: application/json
+
+###
+
+GET {{MovieSearch.Api_HostAddress}}/health
+
+###

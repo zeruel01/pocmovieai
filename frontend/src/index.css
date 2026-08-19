@@ -1,0 +1,75 @@
+:root {
+  font-family: 'Manrope Variable', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background-color: #eef1ed;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100svh;
+  background-color: #eef1ed;
+  background-image:
+    linear-gradient(rgba(24, 53, 45, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 53, 45, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+::selection {
+  color: #ffffff;
+  background: #216869;
+}
+
+@keyframes app-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.app-enter {
+  animation: app-enter 420ms ease-out both;
+}
+
+.workspace-enter,
+.details-enter {
+  animation: app-enter 280ms ease-out both;
+}
+
+.spin-icon {
+  animation: spin 900ms linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-enter,
+  .workspace-enter,
+  .details-enter,
+  .spin-icon {
+    animation: none;
+  }
+}
